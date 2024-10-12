@@ -1,0 +1,209 @@
+
+@import url('reset.css');   /* reseta tudo que vem padrão do html*/
+
+:root { /* criar variaveis */
+    --cor-fundo: #202024;
+    --cor-texto: #e1e1e6;
+
+}
+
+*{
+    list-style: none /*tira ponto do link*/
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--cor-fundo);  /* usando variavel criada no root.... var() */
+}
+
+h2,h3,h4, strong{
+    font-weight: 500;
+
+}
+
+
+
+.image-banner {
+    position: relative;
+    width: 200vh;
+    height: 30vh;
+    cursor: pointer;
+}
+
+.image_ {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease;
+}
+
+.banner-1 {
+    opacity: 1;
+}
+
+.banner-2{
+    opacity: 0;
+}
+
+.image-banner:hover .banner-1 {
+    opacity: 0;
+}
+
+.image-banner:hover .banner-2{
+    opacity: 1;
+}
+
+
+nav{
+    background-color:#79b22c;
+    display: flex;
+    justify-content: space-around; /*alinha elementos*/
+    align-items: center ;
+    height: 5vh /*altura proporcional ao dispositivo*/;
+    padding-left: 0px;
+}
+
+.logo{
+    align-items: center;
+    text-transform: uppercase; /*edita texto caixa alta*/
+    letter-spacing: 3px;
+    cursor:default;  
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400; 
+    font-size: 1.25rem; /*rem pega com base o root html padeão, em pega base da tag pai superior  */
+    padding-left: 0px;
+}
+
+.menu{
+    font-size: 0.8rem;
+    transition: transform 0.3s ease, box-shadow 0.5s ease;
+    
+}
+
+a{
+    color:var(--cor-texto);
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+  
+ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    letter-spacing: 1.2px; 
+}
+
+li{
+    display: inline-flex;
+}
+
+/*Pseudo seletor (hover)*/
+
+.menu:hover{
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.menu:visited {
+    background-color: none;
+}
+  
+.menu:hover {
+    border-radius: 2px;
+    box-shadow: 0px 1px 1px 0px #01090e;
+    
+} 
+
+
+/* ---------------------------------------------------------------------------- */
+
+h2 {
+    padding-bottom:10px;    
+    color:#e1e1e6;
+    padding: 50px;
+    text-align: center;
+}
+
+p,strong {
+    padding: 10px;
+    text-align: justify;
+    
+}
+
+.card-container{
+    display: flex;
+    justify-content:center;
+    cursor: pointer;
+    padding: 40px;
+    color:#e1e1e6;
+    align-items: center;
+    flex-wrap: wrap; /* alinha a baixo  */
+    gap: 40px; /* separar cards */
+    box-shadow: 0px 8px 16px rgba(248, 246, 246, 0.811);
+
+}
+.card:hover{
+    
+    
+    transform: scale(1.3); /*girar*/
+    box-shadow: 0px 8px 16px rgba(248, 246, 246, 0.811);
+}
+
+h3{
+    text-align: center;
+
+}
+
+.card{
+    width:270px;
+    height: 250px;
+    max-width: 270px;
+    background-color: #ffffff3d;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 12px;
+    transition: 2s;
+}
+
+main{
+    width: 80vw; /* ajusta a tela auto*/
+    margin: 0 auto; /*deixar centralizada*/
+    cursor:default
+}
+
+.img-card{
+    width:270px;
+    height: 180px;
+    border-radius: 8px 8px 0 0;
+    
+}
+
+.preco, .parcelamento{
+    text-align: center;
+}
+
+.topo{
+    display: flex;
+    justify-content: end;
+    margin: 5px;
+    
+
+}
+button{
+    border-radius: 5px;
+    background-color: #79b22c;
+    cursor:pointer;
+    padding: 10px;
+    margin: 10px;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px #79b22c
+
+}
+
+button:hover{
+    border-color: none;
+    box-shadow: 0px 4px 8px rgba(248, 246, 246, 0.811);
+}
